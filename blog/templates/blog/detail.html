@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1 class="text-center mt-5" id="blogdetailtitle">{{ new.title }}</h1>
+    <h2 class="text-center text-muted mb-5">--{{ new.data|date:'F jS Y' }}--</h2>
+
+    {{ new.description|safe }}
+{% endblock %}
+</body>
+</html>
